@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="bg-[#F4F7FF] h-full pt-5 pb-10">
+    <div class="container mx-auto">
+        <!-- Navbar -->
+        <div class="navbar  bg-white px-4 flex justify-between items-center shadow-lg rounded-md">
+            <div class="flex justify-center items-center  gap-2">
+                <img src="./assets/logo.png" alt="logo" class="w-10" />
+                <h1 class="text-2xl ">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex gap-2">
+                <div class="flex justify-center items-center gap-2 bg-[#F4F7FF] px-4 py-2 rounded-full">
+                    <div class="">
+                        <img src="./assets/checkbox.png" alt="check" class="w-6" />
+                    </div>
+                    <h1 class="text-2xl font-bold" id="completed-tasks">0</h1>
+                </div>
+                <div
+                
+                class="p-2 bg-[#F4F7FF] rounded-full">
+                    <img onclick="changeBackgroundColor()" src="./assets/theme-btn.png" alt="user" class="w-8 cursor-pointer" />
+                </div>
+            </div>
+        </div>
+        <!-- Main Section -->
+        <div class="grid grid-cols-12 gap-4 mt-5">
+            <!-- Left section -->
+            <div class="col-span-9 flex flex-col gap-6 py-6  bg-white rounded-lg">
+                <div class="flex px-4 justify-between items-center gap-2">
+                    <!-- part 1 -->
+                    <div
+                        class="flex  justify-center items-center w-[270px] h-[128px]  gap-2 bg-[#F4F7FF] p-4 rounded-lg">
+
+                        <div class=" bg-white rounded-full flex items-center justify-center w-16 h-16">
+                            <div class="">
+                                <img src="./assets/checkbox.png" alt="check" class="w-6" />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-items-center items-left gap-1">
+                            <h1>Task Assigned</h1>
+                            <h1 class="text-2xl font-bold" id="task-assign">6</h1>
+                        </div>
+                    </div>
+                    <!-- part 2 -->
+                    <div
+                    onclick="window.location.href='blog.html';"
+                        class="flex cursor-pointer left-section-part-2 justify-left items-center w-[524px] h-[128px]  gap-4 bg-[#F4F7FF] p-4 rounded-lg">
+                        <img class="w-16 h-16 ml-5" src="./assets/board.png " />
+                        <div class="text-white text-lg">
+                            <h1>Discover Something </h1>
+                            <h1 class="">New Today!</h1>
+                        </div>
+                    </div>
+                    <!-- part 3 -->
+                    <div
+                        class="flex  justify-center items-center w-[270px] h-[128px]  gap-2 bg-[#F4F7FF] p-4 rounded-lg">
+
+                        <div class=" bg-white rounded-full flex items-center justify-center w-16 h-16">
+                            <img src="./assets/calender.png" alt="calender" class="w-6" />
+                        </div>
+
+                        <div class="flex flex-col items-start gap-1">
+                            <h1 id="day"></h1>
+                            <h1 id="date" class=" font-bold"></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <hr class="border border-dashed " />
+                </div>
+                <!-- bottom Section -->
+                <div class=" px-4 grid grid-cols-3 gap-y-8 justify-items-center items-center">
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-md bg-[#F4F7FF] p-4 rounded-lg">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">ShopEase</h1>
+                            <h1 class="text-2xl font-semibold card-title">Fix Mobile Button Issue</h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center bg-white rounded-md">Before you start, completely switch off your mobile phone.</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">1 March 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-xl bg-[#F4F7FF] p-4 rounded-md">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">CloudSync</h1>
+                            <h1 class="text-2xl font-semibold card-title">Add Dark Mode</h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center bg-white rounded-md">Enable a sleek dark mode for a comfortable, eye-friendly experience.</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">27 February 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-xl bg-[#F4F7FF] p-4 rounded-md">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">SwiftPay</h1>
+                            <h1 class="text-2xl font-semibold card-title">Optimize  Home page </h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center  bg-white rounded-md">Optimize the homepage by enhancing loading speed, improving UX design.</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">27 February 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-xl bg-[#F4F7FF] p-4 rounded-md">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">Meta</h1>
+                            <h1 class="text-2xl font-semibold card-title">Add new emoji 🤲</h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center bg-white rounded-md">Enhance your chats with fresh new emojis for more expressive communication!</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">24 February 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-xl bg-[#F4F7FF] p-4 rounded-md">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">Google LLC</h1>
+                            <h1 class="text-2xl font-semibold card-title">Integrate OpenAI API </h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center bg-white rounded-md">Integrating the OpenAI API allows developers to add powerful AI capabilities.</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">20 February 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-[342px] h-[317px] shadow-xl bg-[#F4F7FF] p-4 rounded-md">
+                        <div class="flex flex-col justify-items-center items-left gap-4">
+                            <h1 class="w-[114px] bg-white p-1 text-center rounded-md">Glassdoar</h1>
+                            <h1 class="text-2xl font-semibold card-title">Improve Job searching </h1>
+                            <p class="w-[300px] h-[92px] p-4 flex justify-center items-center bg-white rounded-md">Enhance your job search by optimizing your resume, networking actively.</p>
+                            <div class="pt-5 flex justify-between items-center">
+                                <div class="flex flex-col justify-items-center gap-[2px]">
+                                    <h1 class="text-sm">Deadline</h1>
+                                    <h1 class="text-base font-semibold">18 February 2025</h1>
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button
+                                        class="text-white text-base  bg-blue-500 px-4 py-1 rounded-lg">Complete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- right section -->
+            <div class="col-span-3 bg-white flex flex-col gap-5 py-6  text-center rounded-lg">
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-center items-center gap-2">
+                        <img class="w-6" src="./assets/activity.png"/>
+                        <h1>Activity Log</h1>
+                    </div>
+                    <div>
+                        <button id="clear-log" class="text-white text-base  bg-blue-500 px-4 py-1 rounded-md">Clear History</button>
+                    </div>
+                </div>
+                <div>
+                    <hr class="border border-dashed " />
+                </div>
+                <div id="active-log" class="px-4 flex flex-col justify-items-center items-center gap-4">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

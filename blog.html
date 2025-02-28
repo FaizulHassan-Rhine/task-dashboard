@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Blog</title>
+</head>
+<body class="bg-[#F4F7FF] h-full pt-5 pb-10">
+    <div class="container mx-auto">
+        <!-- Navbar -->
+        <div class="navbar  bg-white px-4 flex justify-between items-center shadow-lg rounded-md">
+            <div class="flex justify-center items-center  gap-2">
+                <img src="./assets/logo.png" alt="logo" class="w-10" />
+                <h1 class="text-2xl ">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="">
+                <button class="text-white px-4 py-2 rounded-md bg-blue-500" onclick="window.location.href='index.html';">
+                    Back to Desk
+                </button>
+            </div>
+            
+        </div>
+        <!-- Blog Content -->
+         <h1 class="text-center my-5 text-3xl font-semibold">Blog</h1>
+         <div class="flex flex-col gap-8">
+            <div class="bg-white rounded-md shadow-md flex flex-col gap-5 py-5">
+                <div class="px-4">
+                    <h1 class="font-semibold text-2xl">Question-1: What are the different ways to select an element in the DOM? </h1>
+                </div>
+                <div>
+                    <hr class="border-dashed">
+                </div>
+                <div class="px-4">
+                    <h1 class=" text-xl"><p class="text-xl font-medium mb-4">Different ways to select an element in the DOM:</p>
+                        <ul class="list-disc pl-6 space-y-2 text-xl">
+                          <li><span class="font-semibold">getElementById("id")</span> – Selects an element by its unique ID.</li>
+                          <li><span class="font-semibold">getElementsByClassName("class")</span> – Selects elements with a specific class and returns an HTMLCollection.</li>
+                          <li><span class="font-semibold">getElementsByTagName("tag")</span> – Selects elements by their tag name and returns an HTMLCollection.</li>
+                          <li><span class="font-semibold">querySelector("selector")</span> – Selects the first element that matches a CSS selector.</li>
+                          <li><span class="font-semibold">querySelectorAll("selector")</span> – Selects all elements that match a CSS selector and returns a NodeList.</li>
+                        </ul></h1>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow-md flex flex-col gap-5 py-5">
+                <div class="px-4">
+                    <h1 class="font-semibold text-2xl">Question-2: What is the difference between innerHTML, innerText, and textContent ? </h1>
+                </div>
+                <div>
+                    <hr class="border-dashed">
+                </div>
+                <div class="px-4">
+                    <h1 class=" text-xl">
+                        <table class="min-w-full table-auto border-collapse border border-gray-300">
+                            <thead>
+                              <tr class="bg-gray-200">
+                                <th class="px-4 py-2 text-left">Property</th>
+                                <th class="px-4 py-2 text-left">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="border-t border-gray-200">
+                                <td class="px-4 py-2 font-semibold">innerHTML</td>
+                                <td class="px-4 py-2">Returns or sets the HTML content, including HTML tags.</td>
+                              </tr>
+                              <tr class="border-t border-gray-200">
+                                <td class="px-4 py-2 font-semibold">innerText</td>
+                                <td class="px-4 py-2">Returns or sets the visible text, excluding hidden text and HTML tags.</td>
+                              </tr>
+                              <tr class="border-t border-gray-200">
+                                <td class="px-4 py-2 font-semibold">textContent</td>
+                                <td class="px-4 py-2">Returns or sets the text content, including hidden text, but excluding HTML tags.</td>
+                              </tr>
+                              <tr class="border-t border-gray-200">
+                                <td class="px-4 py-2 font-semibold">Performance</td>
+                                <td class="px-4 py-2">`innerText` is slower than `textContent` because it accounts for CSS styles.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                    </h1>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow-md flex flex-col gap-5 py-5">
+                <div class="px-4">
+                    <h1 class="font-semibold text-2xl">Question-3: What is event delegation in the DOM? </h1>
+                </div>
+                <div>
+                    <hr class="border-dashed">
+                </div>
+                <div class="px-4">
+                    <h1 class=" text-xl">Event delegation is a technique in the DOM where a single event listener is attached to a parent element instead of individual child elements. This allows the parent to handle events for dynamically added or existing child elements. It relies on the event's bubbling phase to propagate up from the target element to the parent. This method improves performance, especially when there are many child elements. It is commonly used for handling events like clicks on lists or buttons.</h1>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow-md flex flex-col gap-5 py-5">
+                <div class="px-4">
+                    <h1 class="font-semibold text-2xl">Question-4: What is event bubbling in the DOM? </h1>
+                </div>
+                <div>
+                    <hr class="border-dashed">
+                </div>
+                <div class="px-4">
+                    <h1 class=" text-xl">Event bubbling is a concept in the DOM (Document Object Model) where an event starts at the most specific element (the target) and then "bubbles" up to the root of the document, triggering any event listeners on ancestor elements. It is the default propagation behavior for most events. Developers can stop this propagation using the stopPropagation method. Event bubbling allows parent elements to handle events for child elements without needing direct listeners on each child. It contrasts with event capturing, where the event starts from the root and moves down to the target.</h1>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow-md flex flex-col gap-5 py-5">
+                <div class="px-4">
+                    <h1 class="font-semibold text-2xl">Question-5: How do you create, add, and remove elements using JavaScript? </h1>
+                </div>
+                <div>
+                    <hr class="border-dashed">
+                </div>
+                <div class="px-4">
+                    <h1 class=" text-xl">
+                        <table class="min-w-full table-auto border-collapse border border-gray-200">
+                            <thead>
+                              <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-4 py-2 text-left">Action</th>
+                                <th class="border border-gray-300 px-4 py-2 text-left">Code</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Create an element</td>
+                                <td class="border border-gray-300 px-4 py-2">document.createElement('tagName');</td>
+                              </tr>
+                              <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Add an element to the DOM</td>
+                                <td class="border border-gray-300 px-4 py-2">parentElement.appendChild(newElement);</td>
+                              </tr>
+                              <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Remove an element</td>
+                                <td class="border border-gray-300 px-4 py-2">parentElement.removeChild(elementToRemove);</td>
+                              </tr>
+                              <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Add a class to an element</td>
+                                <td class="border border-gray-300 px-4 py-2">element.classList.add('className');</td>
+                              </tr>
+                              <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-2">Remove a class from an element</td>
+                                <td class="border border-gray-300 px-4 py-2">element.classList.remove('className');</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                    </h1>
+                    
+                </div>
+            </div>
+         </div>
+    </div>
+    
+</body>
+</html>
